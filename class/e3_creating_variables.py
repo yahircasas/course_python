@@ -7,7 +7,7 @@ nombre_licenciatura = "Actuaría"
 edad_decimal = 21
 
 # creación de un Float
-numero_pi = 3.1415926535
+numero_PI = 3.1415926535
 
 # creación de una lista
 numeros_favoritos = [22,10,2002]
@@ -35,7 +35,7 @@ print("Entero:", edad_decimal)
 print("Tupla:", nombres_hermanos)
 
 # imprime un número decimal que representa el valor de pi
-print("Decimal:", numero_pi)
+print("Decimal:", numero_PI)
 
 # imprime una cadena que representa el nombre de una licenciatura
 print("Cadena:", nombre_licenciatura)
