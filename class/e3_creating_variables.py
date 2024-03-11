@@ -25,23 +25,23 @@ informacion_estudiante = {"Nombre": "Yahir Eduardo", "Apellido": "Casas Valdez",
 # creación de un complex
 numero_complejo = 1 + 2j
 
-# Imprime una lista de números favoritos
+# imprime una lista de números favoritos
 print("Lista:", numeros_favoritos)
 
-# Imprime un entero que representa una edad en formato decimal
+# imprime un entero que representa una edad en formato decimal
 print("Entero:", edad_decimal)
 
-# Imprime una tupla de nombres de hermanos
+# imprime una tupla de nombres de hermanos
 print("Tupla:", nombres_hermanos)
 
-# Imprime un número decimal que representa el valor de pi
+# imprime un número decimal que representa el valor de pi
 print("Decimal:", numero_pi)
 
-# Imprime una cadena que representa el nombre de una licenciatura
+# imprime una cadena que representa el nombre de una licenciatura
 print("Cadena:", nombre_licenciatura)
 
-# Imprime un diccionario que contiene información sobre un estudiante
+# imprime un diccionario que contiene información sobre un estudiante
 print("Diccionario:", informacion_estudiante)
 
-# Imprime un conjunto de números que son múltiplos de algún número
+# imprime un conjunto de números que son múltiplos de algún número
 print("Conjunto:", numeros_multiplos)
