@@ -13,7 +13,7 @@ print(name * 3)
 
 # 4. Use + operator with a string and with a list(as you want)
 surname = 'Casas'
-print(name + surname)
+print(name + ' ' + surname)
 
 # ------------------- Slicing for strings-----------------------
 # We can use s[i:j:k] to make a slicing in python, solve each point
@@ -22,14 +22,22 @@ print(name + surname)
 sentence = """In mathematics, a theorem is a statement that has been proved, or can be proved. The proof of a theorem 
 is a logical argument that uses the inference rules of a deductive system to establish that the theorem 
 is a logical consequence of the axioms and previously proved theorems."""
-print(sentence[176:])  # se imprime una porción específica de la variable sentence
+# print(sentence[176:])  # se imprime una porción específica de la variable sentence
+
+print(sentence[sentence.rfind('is'):])  # profe
 
 # 6.From the user's input, print the name, but beginning with the last names. Make sure each first letter is capitalized
 # sheldon axler -> Axler Sheldon
 # name = input('What is your full name? ') UNCOMMENT WHEN YOU USE THIS
-name_6 = 'sheldon axler'
-new_name = name_6.split()  # se divide la cadena en una lista de palabras
-print(new_name[1].capitalize(),new_name[0].capitalize())  # se imprimen las palabras en orden inverso con la primera letra en mayúscula
+# name_6 = 'sheldon axler'
+# new_name = name_6.split()  # se divide la cadena en una lista de palabras
+# print(new_name[1].capitalize(),new_name[0].capitalize())  # se imprimen las palabras en orden inverso con la primera letra en mayúscula
+
+#  profe
+name = input('What is your full name? ').title()  # UNCOMMENT WHEN YOU USE THIS
+my_split = name.split()
+print(my_split)
+print(my_split[-1], my_split[0])
 
 # 7. 'tcerroc eht tuo tnirp dna ti esrever tsuJ .od ot deen uoy tahw tuoba tnih a uoy evig ot ecnetnes a tsuj si sihT'
 sentence_2 = '.od ot deen uoy tahw tuoba tnih a uoy evig ot ecnetnes a tsuj si sihT'
