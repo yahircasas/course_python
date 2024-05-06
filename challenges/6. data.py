@@ -13,3 +13,18 @@ THAT IS, IMITATE THE BEHAVIOUR OF THAT FUNCTION
 
 data = [172, 140, 123, 130, 115, 148, 108, 129, 137, 161, 123, 152, 133, 128, 142]
 
+import statistics
+
+def sample_statistics(data):
+    sample_mean = statistics.mean(data)
+    sample_stdev = statistics.stdev(data)
+    return sample_mean, sample_stdev
+
+def main():
+    data = [172, 140, 123, 130, 115, 148, 108, 129, 137, 161, 123, 152, 133, 128, 142]
+    sample_mean, sample_stdev = sample_statistics(data)
+    print("Sample Mean (x̄):", sample_mean)
+    print("Sample Standard Deviation (s):", sample_stdev)
+
+if __name__ == "__main__":
+    main()
