@@ -10,29 +10,3 @@ between 1 and 10,000.
 """
 
 
-def es_numero_perfecto(n):
-
-    if n <= 1:
-        return False
-
-    suma_divisores = sum(i for i in range(1, n) if n % i == 0)
-
-    return suma_divisores == n
-
-def main():
-
-    user_input = int(input("Por favor, ingrese un número para verificar si es perfecto: "))
-
-    if es_numero_perfecto(user_input):
-        print("True")
-    else:
-        print("False")
-
-    print("Números perfectos entre 1 y 10,000:")
-    for num in range(1, 10001):
-        if es_numero_perfecto(num):
-            print(num)
-
-if __name__ == "__main__":
-    main()
-
