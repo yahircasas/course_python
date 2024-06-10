@@ -16,7 +16,7 @@ d = 500
 L = 2500
 u = 3000
 
-# Definimos la distribución de Pareto con scipy
+# Distribución de Pareto con scipy
 pareto_dist = stats.pareto(b=a, scale=theta)
 
 # Función de densidad (pdf) de Pareto

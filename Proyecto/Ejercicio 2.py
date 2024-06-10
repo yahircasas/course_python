@@ -15,8 +15,6 @@ the modified severity distribution that will reflect the reinsurer's payments.
 (c) Determine the reinsurer's frequency and severity distributions when the severity
 distribution is to be conditional on a reinsurance payment being made.
 '''
-
-
 import numpy as np
 
 # (a) Frecuencia y severidad
@@ -29,14 +27,12 @@ prob_muerte_ordinaria_dado_reclamo = 0.01 / 0.03
 prob_muerte_accidental_dado_reclamo = 0.02 / 0.03
 distribucion_severidad = {
     'muerte_ordinaria': (10000, prob_muerte_ordinaria_dado_reclamo),
-    'muerte_accidental': (20000, prob_muerte_accidental_dado_reclamo)
-}
+    'muerte_accidental': (20000, prob_muerte_accidental_dado_reclamo)}
 
 # (b) Severidad modificada para el reasegurador
 distribucion_severidad_reasegurador = {
     'muerte_ordinaria': (0, prob_muerte_ordinaria_dado_reclamo),
-    'muerte_accidental': (10000, prob_muerte_accidental_dado_reclamo)
-}
+    'muerte_accidental': (10000, prob_muerte_accidental_dado_reclamo)}
 
 # (c) Frecuencia y severidad del reasegurador
 prob_no_pago_reasegurador = 0.98  # 0.97 (no reclamo) + 0.01 (muerte ordinaria)
@@ -45,21 +41,23 @@ prob_pago_reasegurador = 0.02
 # Severidad dada el pago de reaseguro
 distribucion_severidad_condicional_reasegurador = {
     'sin_pago': (0, 0),
-    'con_pago': (10000, 1)
-}
+    'con_pago': (10000, 1) }
 
-# Mostrar los resultados
-print("Frecuencia (Bernoulli) - No reclamo:", prob_no_claim)
-print("Frecuencia (Bernoulli) - Reclamo:", prob_claim)
+print("Frecuencia (Bernoulli) - No reclamo: {:.2f}".format(prob_no_claim))
+print("Frecuencia (Bernoulli) - Reclamo: {:.2f}".format(prob_claim))
+
 print("\nSeveridad dado un reclamo:")
-print(distribucion_severidad)
+print("Muerte ordinaria: $10,000 con probabilidad {:.2f}".format(prob_muerte_ordinaria_dado_reclamo))
+print("Muerte accidental: $20,000 con probabilidad {:.2f}".format(prob_muerte_accidental_dado_reclamo))
 
 print("\nSeveridad modificada para el reasegurador:")
-print(distribucion_severidad_reasegurador)
+print("Muerte ordinaria: $0 con probabilidad {:.2f}".format(prob_muerte_ordinaria_dado_reclamo))
+print("Muerte accidental: $10,000 con probabilidad {:.2f}".format(prob_muerte_accidental_dado_reclamo))
 
 print("\nFrecuencia del reasegurador (Bernoulli):")
-print("Sin pago:", prob_no_pago_reasegurador)
-print("Con pago:", prob_pago_reasegurador)
+print("Sin pago: {:.2f}".format(prob_no_pago_reasegurador))
+print("Con pago: {:.2f}".format(prob_pago_reasegurador))
 
 print("\nSeveridad del reasegurador dada un pago de reaseguro:")
-print(distribucion_severidad_condicional_reasegurador)
+print("Sin pago: $0 con probabilidad 0.00")
+print("Con pago: $10,000 con probabilidad 1.00")
