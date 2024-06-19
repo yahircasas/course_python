@@ -12,3 +12,13 @@ assumed to be an English word. The function should return the translation of thi
 into Pig Latin.
 """
 
+def pig_latin(palabra):
+    vocales = 'aeiou'
+    if palabra[0].lower() in vocales:
+        return palabra + 'way'
+    else:
+        return palabra[1:] + palabra[0] + 'ay'
+
+# Solicitando al usuario que ingrese una palabra
+entrada = input("Ingrese una palabra en inglés: ")
+print(pig_latin(entrada))

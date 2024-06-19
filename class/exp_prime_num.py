@@ -1,6 +1,6 @@
 # Write a program to find and print all prime numbers between 1 and 100
 
-for num in range (1,1000000):
+for num in range (1,100):
     div = 0
     for _ in range (1,101):
         if num % _ == 0:
